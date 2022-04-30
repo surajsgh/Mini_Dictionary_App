@@ -48,11 +48,12 @@ function App() {
       </div>
 
       {/* Error Notification */}
-      {error && <div className='showResults'><p>This word has no meaning.</p></div>}
+      {error && <div className='showResults'><h2>This word has no meaning</h2></div>}
 
       {/* Result Output */}
       {data && <div className='showResults'>
-        <h2>{data.word}</h2>
+        <h2>Result</h2>
+        <h4>{data.word}</h4>
         <ul>{data.meanings[0].definitions.map((def, index) => 
           <li key={index}>{def.definition}</li>
         )}</ul>
